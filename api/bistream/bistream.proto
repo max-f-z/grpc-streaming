@@ -1,0 +1,17 @@
+syntax= "proto3";
+
+package bistream;
+
+service BiStream {
+    rpc BiStreaming(stream BiStreamReq) returns (stream BiStreamResp) {}
+}
+
+message BiStreamReq {
+    int64 msgId = 1;
+    int64 num = 2; 
+}
+
+message BiStreamResp {
+    int64 msgId = 1;
+    string message = 2;
+}

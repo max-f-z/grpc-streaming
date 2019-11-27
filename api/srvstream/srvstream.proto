@@ -1,0 +1,16 @@
+syntax= "proto3";
+
+package srvstream;
+
+service SrvStream {
+    rpc SrvStreaming(SrvStreamReq) returns (stream SrvStreamResp) {}
+}
+
+message SrvStreamReq {
+    string name = 1; 
+}
+
+message SrvStreamResp {
+    int64 msgId = 1;
+    string message = 2;
+}

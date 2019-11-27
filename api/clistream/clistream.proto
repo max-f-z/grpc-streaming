@@ -1,0 +1,16 @@
+syntax= "proto3";
+
+package clistream;
+
+service CliStream {
+    rpc CliStreaming(stream CliStreamReq) returns (CliStreamResp) {}
+}
+
+message CliStreamReq {
+    int64 msgId = 1;
+    string name = 2; 
+}
+
+message CliStreamResp {
+    string message = 1;
+}

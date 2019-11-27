@@ -3,8 +3,3 @@
 /api/*/*.pb.go
 /api/*/*.pb.validate.go
 /.vscode
-debug.test
-/tianlu.exe
-/api/proto/*_pb.js
-/api/proto/protoutils/*_pb.js
-/kubeconfig
